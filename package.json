@@ -1,0 +1,54 @@
+{
+  "name": "revealer",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "author": "Fabian Irsara <info@fabianirsara.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:firsara/revealer.git"
+  },
+  "scripts": {
+    "commit": "yarn run precommit && git-cz",
+    "start": "./node_modules/.bin/parcel src/index.html --out-dir .parcel",
+    "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/parcel build src/index.html --out-dir dist --public-url ./",
+    "test": "mocha --require babel-core/register --recursive './src/**/__tests__/*-test.js'",
+    "coverage": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha --report text --check-coverage -- --require babel-core/register --recursive './src/**/__tests__/*-test.js'",
+    "lint": "./node_modules/eslint/bin/eslint.js ./src",
+    "flow": "./node_modules/.bin/flow",
+    "create-changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s",
+    "precommit": "yarn run lint && yarn run flow && yarn run test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-istanbul": "^0.12.2",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "commitizen": "^2.9.6",
+    "conventional-changelog-cli": "^1.3.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "cz-customizable": "^5.2.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "flow-bin": "^0.63.1",
+    "mocha": "^4.1.0",
+    "parcel-bundler": "^1.4.1",
+    "rimraf": "^2.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  }
+}
