@@ -2,8 +2,8 @@ module.exports = {
   allowBreakingChanges: ['feat'],
   allowCustomScopes: false,
   scopes: [
-    'lib',
-    'styles',
+    'animations',
+    'core',
     'utils'
   ],
   types: [

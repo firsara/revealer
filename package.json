@@ -13,13 +13,17 @@
     "start": "./node_modules/.bin/parcel src/index.html --out-dir .parcel",
     "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/parcel build src/index.html --out-dir dist --public-url ./",
     "test": "mocha --require babel-core/register --recursive './src/**/__tests__/*-test.js'",
-    "coverage": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha --report text --check-coverage -- --require babel-core/register --recursive './src/**/__tests__/*-test.js'",
+    "coverage": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha --report text --recursive './src/**/__tests__/*-test.js'",
+    "generate-coverage": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha --recursive './src/**/__tests__/*-test.js'",
     "lint": "./node_modules/eslint/bin/eslint.js ./src",
     "flow": "./node_modules/.bin/flow",
     "create-changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s",
     "precommit": "yarn run lint && yarn run flow && yarn run test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "scrollmonitor": "^1.2.4"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
