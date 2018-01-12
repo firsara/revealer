@@ -4,7 +4,8 @@ module.exports = {
   scopes: [
     'animations',
     'core',
-    'utils'
+    'utils',
+    'examples',
   ],
   types: [
     {value: 'feat',     name: 'feat:     A new feature'},
