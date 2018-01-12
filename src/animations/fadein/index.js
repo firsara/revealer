@@ -11,23 +11,17 @@ export type Options = RvlrOptions & {
   delay: number,
 };
 
-const DEFAULT_OPTIONS = {
-  easing: 'easeOutQuint',
-  duration: 2000,
-  delay: 0,
-};
-
 export default class FadeIn {
   node: HTMLElement;
   options: Options;
 
-  constructor(node: HTMLElement, options: Options) {
-    this.node = node;
-    this.options = {
-      ...DEFAULT_OPTIONS,
-      ...options,
-    };
+  static DEFAULT_OPTIONS = {
+    easing: 'easeOutQuint',
+    duration: 2000,
+    delay: 0,
+  };
 
+  setup() {
     this.init();
   }
 
@@ -46,6 +40,7 @@ export default class FadeIn {
   }
 
   leftViewport() {
+    anime.remove(this.node);
     this.init();
   }
 }
