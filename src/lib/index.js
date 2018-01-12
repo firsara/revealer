@@ -37,56 +37,63 @@ export type Easings =
 
 export type RvlrOptions = {
   animation: RvlrAnimation,
-  duration: number,
-  delay: number,
-  singleAnimation: boolean,
+  singleanimation: boolean,
 };
 
 export type RvlrElement = {
   node: HTMLElement,
   watcher: ScrollWatcher,
-  options: RvlrOptions,
 };
 
 export const DEFAULT_OPTIONS: RvlrOptions = {
-  animation: '',
-  duration: 300,
-  delay: 0,
-  singleAnimation: true,
+  animation: 'fadein',
+  singleanimation: false,
 };
 
 export function createRevealerItem(node: HTMLElement): RvlrElement {
   node.setAttribute('data-rvlr-initialized', 'true');
 
-  const options = getItemOptions(node);
   const watcher = scrollMonitor.create(node);
 
   return {
     node,
     watcher,
-    options,
   };
 }
 
 export function setupRevealerItem(item: RvlrElement): ?Animation {
-  const { watcher, options: { animation: type, singleAnimation } } = item;
+  const { node, watcher } = item;
 
-  // $FlowFixMe
+  const attr = node.getAttribute('data-rvlr-animation');
+  const type = attr && attr.length > 0 && animations[attr]
+    ? attr
+    : DEFAULT_OPTIONS.animation;
+
   const AnimationInstance: any = animations[type];
 
   if (AnimationInstance) {
-    const animation: Animation = new AnimationInstance(item.node, item.options);
+    const defaultOptions = {
+      ...DEFAULT_OPTIONS,
+      ...AnimationInstance.DEFAULT_OPTIONS,
+    };
+
+    const options = getItemOptions(node, defaultOptions);
+
+    const animation: Animation = new AnimationInstance();
+    animation.node = item.node;
+    animation.options = options;
+    animation.setup();
 
     watcher.enterViewport(() => {
       animation.animate();
 
-      if (singleAnimation) {
+      if (options.singleanimation) {
         watcher.destroy();
       }
     });
 
     watcher.exitViewport(() => {
-      if (!singleAnimation) {
+      if (!options.singleanimation) {
         animation.leftViewport();
       }
     });

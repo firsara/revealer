@@ -1,5 +1,206 @@
 <html>
+  <style>
+    body {
+      margin: 0;
+      font-size: 16px;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      padding: 50px;
+    }
+
+    section {
+      margin: 200px 0;
+      border: 1px solid #efefef;
+      border-left: none;
+      border-right: none;
+      padding: 100px 0;
+    }
+
+    h1 {
+      font-size: 96px;
+      font-weight: 200;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 200;
+      background: #efefef;
+      padding: 30px;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 200;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    table td {
+      padding: 5px 10px;
+    }
+    table td:first-child {
+      padding-left: 0;
+    }
+  </style>
 <body>
+  <h1 data-rvlr-animation="fadein" data-rvlr-delay="200" data-rvlr-singleAnimation="true">Revealer</h1>
+  <p data-rvlr-animation="fadein" data-rvlr-delay="300" data-rvlr-singleAnimation="true">Every Animation can have the following properties</p>
+
+  <table>
+    <tr data-rvlr-animation="fadein" data-rvlr-delay="400" data-rvlr-singleAnimation="true">
+      <td><strong>animation</strong></td>
+      <td><em>string</em></td>
+      <td><span>The Revealer animation that should be used</span></td>
+    </tr>
+    <tr data-rvlr-animation="fadein" data-rvlr-delay="500" data-rvlr-singleAnimation="true">
+      <td><strong>singleAnimation</strong></td>
+      <td><em>Boolean</em></td>
+      <td><span>Whether the animation should be run multiple times when scrolling through or not (default = multiple times)</span></td>
+    </tr>
+  </table>
+
+  <section>
+    <h2 data-rvlr-animation="fadein" data-rvlr-delay="600" data-rvlr-singleAnimation="true">Easings</h2>
+
+    <p data-rvlr-animation="fadein" data-rvlr-delay="700" data-rvlr-singleAnimation="true">There's several easings that you can use on different animations:</p>
+
+    <ul>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="800" data-rvlr-singleAnimation="true">easeInQuad</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="850" data-rvlr-singleAnimation="true">easeOutQuad</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="900" data-rvlr-singleAnimation="true">easeInOutQuad</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="950" data-rvlr-singleAnimation="true">easeInCubic</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1000" data-rvlr-singleAnimation="true">easeOutCubic</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1050" data-rvlr-singleAnimation="true">easeInOutCubic</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1100" data-rvlr-singleAnimation="true">easeInQuart</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1150" data-rvlr-singleAnimation="true">easeOutQuart</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1200" data-rvlr-singleAnimation="true">easeInOutQuart</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1250" data-rvlr-singleAnimation="true">easeInQuint</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1300" data-rvlr-singleAnimation="true">easeOutQuint</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1350" data-rvlr-singleAnimation="true">easeInOutQuint</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1400" data-rvlr-singleAnimation="true">easeInSine</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1450" data-rvlr-singleAnimation="true">easeOutSine</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1500" data-rvlr-singleAnimation="true">easeInOutSine</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1550" data-rvlr-singleAnimation="true">easeInExpo</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1600" data-rvlr-singleAnimation="true">easeOutExpo</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1650" data-rvlr-singleAnimation="true">easeInOutExpo</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1700" data-rvlr-singleAnimation="true">easeInCirc</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1750" data-rvlr-singleAnimation="true">easeOutCirc</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1800" data-rvlr-singleAnimation="true">easeInOutCirc</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1850" data-rvlr-singleAnimation="true">easeInBack</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1900" data-rvlr-singleAnimation="true">easeOutBack</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="1950" data-rvlr-singleAnimation="true">easeInOutBack</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="2000" data-rvlr-singleAnimation="true">easeInElastic</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="2050" data-rvlr-singleAnimation="true">easeOutElastic</li>
+      <li data-rvlr-animation="fadein" data-rvlr-delay="2100" data-rvlr-singleAnimation="true">easeInOutElastic</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-rvlr-animation="fadein" data-rvlr-delay="600" data-rvlr-singleAnimation="true">FadeIn Animation</h2>
+
+    <p data-rvlr-animation="fadein" data-rvlr-delay="700" data-rvlr-singleAnimation="true">Allowed properties:</p>
+
+    <table>
+      <tr data-rvlr-animation="fadein" data-rvlr-delay="800" data-rvlr-singleAnimation="true">
+        <td><strong>easing</strong></td>
+        <td><em>Easing</em></td>
+        <td><span>See easings</span></td>
+      </tr>
+      <tr data-rvlr-animation="fadein" data-rvlr-delay="900" data-rvlr-singleAnimation="true">
+        <td><strong>duration</strong></td>
+        <td><em>number</em></td>
+        <td><span>in ms</span></td>
+      </tr>
+      <tr data-rvlr-animation="fadein" data-rvlr-delay="1000" data-rvlr-singleAnimation="true">
+        <td><strong>delay</strong></td>
+        <td><em>number</em></td>
+        <td><span>in ms</span></td>
+      </tr>
+    </table>
+
+    <h3 data-rvlr-animation="fadein" data-rvlr-delay="1200">This is an example headline</h3>
+    <h4
+      data-rvlr-animation="fadein"
+      data-rvlr-duration="500"
+      data-rvlr-easing="easeInQuint"
+      data-rvlr-delay="1300"
+    >And a longer subheadline to demonstrate a long amount of text and custom properties like easing and duration.</h4>
+  </section>
+
+  <section>
+    <div data-rvlr-animation="blockReveal" data-rvlr-delay="200" data-rvlr-singleAnimation="true">
+      <h2>BlockReveal Animation</h2>
+    </div>
+
+    <p data-rvlr-animation="blockReveal" data-rvlr-direction="rl" data-rvlr-delay="400" data-rvlr-singleAnimation="true" data-rvlr-measureContent="true">Allowed properties:</p>
+
+    <div data-rvlr-animation="blockReveal" data-rvlr-delay="600" data-rvlr-direction="tb" data-rvlr-bgColor="#efefef" data-rvlr-singleAnimation="true" data-rvlr-measureContent="true">
+      <table>
+        <tr>
+          <td><strong>easing</strong></td>
+          <td><em>Easing</em></td>
+          <td><span>See easings</span></td>
+        </tr>
+        <tr>
+          <td><strong>easeIn</strong></td>
+          <td><em>Easing</em></td>
+          <td><span>Overwrites easing for the initial animation of the overlay block</span></td>
+        </tr>
+        <tr>
+          <td><strong>easeOut</strong></td>
+          <td><em>Easing</em></td>
+          <td><span>Overwrites easing for the second animation of the overlay block</span></td>
+        </tr>
+        <tr>
+          <td><strong>duration</strong></td>
+          <td><em>number</em></td>
+          <td><span>in ms</span></td>
+        </tr>
+        <tr>
+          <td><strong>delay</strong></td>
+          <td><em>number</em></td>
+          <td><span>in ms</span></td>
+        </tr>
+        <tr>
+          <td><strong>bgColor</strong></td>
+          <td><em>string</em></td>
+          <td><span>css color</span></td>
+        </tr>
+        <tr>
+          <td><strong>measureContent</strong></td>
+          <td><em>Boolean</em></td>
+          <td><span>if set, measures inner content size instead of spanning the whole width / height of the block</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <h3
+      data-rvlr-animation="blockReveal"
+      data-rvlr-direction="bt"
+      data-rvlr-delay="800"
+      data-rvlr-bgColor="#3c3c3c"
+      data-rvlr-measureContent="true"
+    >This headline demonstrates the block reveal animation</h3>
+
+    <h4
+      data-rvlr-animation="blockReveal"
+      data-rvlr-delay="600"
+      data-rvlr-duration="1000"
+      data-rvlr-direction="rl"
+      data-rvlr-easeIn="easeInExpo"
+      data-rvlr-easeOut="easeOutQuad"
+      data-rvlr-bgColor="#007acc"
+      data-rvlr-measureContent="true"
+    >Followed by custom duration, easing, direction, and other options provided by the block reveal animation.</h4>
+  </section>
+
   <script src="./index.js"></script>
 </body>
 </html>
