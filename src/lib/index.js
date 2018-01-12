@@ -37,8 +37,6 @@ export type Easings =
 
 export type RvlrOptions = {
   animation: RvlrAnimation,
-  duration: number,
-  delay: number,
   singleAnimation: boolean,
 };
 
@@ -49,9 +47,7 @@ export type RvlrElement = {
 };
 
 export const DEFAULT_OPTIONS: RvlrOptions = {
-  animation: '',
-  duration: 300,
-  delay: 0,
+  animation: 'fadein',
   singleAnimation: true,
 };
 
@@ -71,7 +67,6 @@ export function createRevealerItem(node: HTMLElement): RvlrElement {
 export function setupRevealerItem(item: RvlrElement): ?Animation {
   const { watcher, options: { animation: type, singleAnimation } } = item;
 
-  // $FlowFixMe
   const AnimationInstance: any = animations[type];
 
   if (AnimationInstance) {

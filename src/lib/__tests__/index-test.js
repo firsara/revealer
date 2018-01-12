@@ -2,6 +2,7 @@
 import { assert } from 'chai';
 
 import { createRevealerItem, setupRevealerItem, DEFAULT_OPTIONS } from '..';
+import FadeIn from '../../animations/fadein/index';
 
 describe('lib', () => {
   const htmlItemMockup = {
@@ -65,6 +66,14 @@ describe('lib', () => {
 
       const actual = setupRevealerItem(rvlrItem);
       assert.isNull(actual);
+    });
+  });
+
+  describe('setupRevealerItem()', () => {
+    it('should return animation instance', () => {
+      const mock = { ...htmlItemMockup };
+      const actual = setupRevealerItem(createRevealerItem(mock));
+      assert.instanceOf(actual, FadeIn);
     });
   });
 });
