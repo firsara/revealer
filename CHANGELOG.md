@@ -1,3 +1,13 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/firsara/rvlr/compare/v0.1.0...v0.1.1) (2018-01-13)
+
+
+### Bug Fixes
+
+* **core:** fix initialization and export of rvlr lib ([7da354a](https://github.com/firsara/rvlr/commit/7da354a))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-01-12)
 
