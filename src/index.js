@@ -1,9 +1,8 @@
 // @flow
 import { rvlr } from './lib';
 
-if (!(typeof module !== 'undefined' && module.exports)) {
-  // $FlowFixMe
-  this.rvlr = rvlr;
+if (typeof window !== 'undefined') {
+  window.rvlr = rvlr;
 }
 
 rvlr();
