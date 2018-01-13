@@ -1,12 +1,12 @@
 {
-  "name": "revealer",
-  "version": "0.1.0",
+  "name": "rvlr",
+  "version": "0.1.1",
   "main": "src/index.js",
   "author": "Fabian Irsara <info@fabianirsara.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:firsara/revealer.git"
+    "url": "git@github.com:firsara/rvlr.git"
   },
   "scripts": {
     "commit": "yarn run precommit && git-cz",
