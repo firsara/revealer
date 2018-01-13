@@ -4,11 +4,11 @@
 
 ### Features
 
-* **animations:** add blockReveal animation ([5af34b7](https://github.com/firsara/revealer/commit/5af34b7))
-* **animations:** add fadeIn animation ([df17732](https://github.com/firsara/revealer/commit/df17732))
-* **core:** add base lib ([68f6bcc](https://github.com/firsara/revealer/commit/68f6bcc))
-* **examples:** add basic example to demonstrate fadeIn animation ([cb3451e](https://github.com/firsara/revealer/commit/cb3451e))
-* **examples:** add examples for block reveal animation ([4f7b249](https://github.com/firsara/revealer/commit/4f7b249))
+* **animations:** add blockReveal animation ([5af34b7](https://github.com/firsara/rvlr/commit/5af34b7))
+* **animations:** add fadeIn animation ([df17732](https://github.com/firsara/rvlr/commit/df17732))
+* **core:** add base lib ([68f6bcc](https://github.com/firsara/rvlr/commit/68f6bcc))
+* **examples:** add basic example to demonstrate fadeIn animation ([cb3451e](https://github.com/firsara/rvlr/commit/cb3451e))
+* **examples:** add examples for block reveal animation ([4f7b249](https://github.com/firsara/rvlr/commit/4f7b249))
 
 
 

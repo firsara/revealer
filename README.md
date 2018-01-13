@@ -1,9 +1,15 @@
-# Revealer
-[![Build Status](https://travis-ci.org/firsara/revealer.svg?branch=master)](https://travis-ci.org/firsara/revealer)
-[![codecov](https://codecov.io/gh/firsara/revealer/branch/master/graph/badge.svg)](https://codecov.io/gh/firsara/revealer)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://rawgit.com/firsara/revealer/master/LICENSE)
+# rvlr
+[![Build Status](https://travis-ci.org/firsara/rvlr.svg?branch=master)](https://travis-ci.org/firsara/rvlr)
+[![codecov](https://codecov.io/gh/firsara/rvlr/branch/master/graph/badge.svg)](https://codecov.io/gh/firsara/rvlr)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://rawgit.com/firsara/rvlr/master/LICENSE)
 
 ## Installation
+
+```
+npm install rvlr
+```
+
+## Contribute
 
 ### Install Yarn
 
@@ -23,11 +29,15 @@ yarn install
 yarn start
 ```
 
-## Contribute
-
 ### Install commitizen
 
 ```
 npm i -g commitizen
 npm i
+```
+
+### Commit changes
+
+```
+yarn run commit
 ```
